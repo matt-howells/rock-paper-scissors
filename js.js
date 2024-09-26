@@ -1,10 +1,4 @@
-// Step 4: Declare score variables
 
-let humanScore = 0
-let computerScore = 0
-
-
-// Step 2: Write the logic to get the computer choice
 
 function getComputerChoice() {                  
     let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -25,12 +19,17 @@ function getHumanChoice() {
 } 
 
 
-// Step 6: Write the logic to play the entire game. 
+// Step 5: Write the logic to play one round. 
 
-function playRound(humanChoice, computerChoice) {
+function playGame() { 
+    
+    let humanScore = 0;
+    let computerScore = 0;
 
-    humanChoice = getHumanChoice().toLowerCase();
-    computerChoice = getComputerChoice();
+function playRound() {
+
+    let humanChoice = getHumanChoice().toLowerCase();
+    let computerChoice = getComputerChoice();
     
     if (humanChoice === "rock" && computerChoice === "paper" ||        
         humanChoice === "scissors" && computerChoice === "rock" ||    
@@ -43,11 +42,21 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
         console.log("You Win! " + humanChoice + " beats " + computerChoice + ".")
     } else {
-        return console.log("Invalid input.")
+        console.log("Invalid input.")
     }
 }
 
-playRound()
+for (let i = 0; i < 5; i++) {
+    playRound();
+}
+
+console.log(`Final Scores - You: ${humanScore}, Computer: ${computerScore}`);
+
+}
+
+
+
+playGame()
 
     
 
