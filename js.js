@@ -21,33 +21,37 @@ function getComputerChoice() {
 // Step 3: Write the logic to get the human choice
 
 function getHumanChoice() {
-    return prompt("Pick your poison: rock, paper, or scissors?").toLowerCase()
+    return prompt("Pick your poison: rock, paper, or scissors?")
 } 
 
-// Step 5: Write the logic to play a single round 
+
+// Step 6: Write the logic to play the entire game. 
 
 function playRound(humanChoice, computerChoice) {
-    
+
     humanChoice = getHumanChoice().toLowerCase();
     computerChoice = getComputerChoice();
-
-    if (humanChoice === computerChoice){
-        return console.log("It's a tie!" + computerChoice + "meets" + humanChoice)
-    } else if (humanChoice === "rock" && computerChoice === "paper" ||
-            humanChoice === "scissors" && computerChoice === "rock" ||
-            humanChoice === "paper" && computerChoice === "scissors"){
-        return console.log("You lost," + comptuterChoice + "beats " + humanChoice)
+    
+    if (humanChoice === "rock" && computerChoice === "paper" ||        
+        humanChoice === "scissors" && computerChoice === "rock" ||    
+        humanChoice === "paper" && computerChoice === "scissors"){
+        computerScore++;
+        console.log("You lost, " + computerChoice + " beats " + humanChoice + ".")
     } else if (humanChoice === "rock" && computerChoice === "scissors" ||
-            humanChoice === "scissors" && computerChoice === "paper" ||
-            humanChoice === "paper" && computerChoice === "rock"){
-        return console.log("You Win! " + humanChoice + "beats " + computerChoice)
+        humanChoice === "scissors" && computerChoice === "paper" ||
+        humanChoice === "paper" && computerChoice === "rock"){
+        humanScore++;
+        console.log("You Win! " + humanChoice + " beats " + computerChoice + ".")
     } else {
         return console.log("Invalid input.")
     }
 }
 
 playRound()
+
     
+
+
 
     
 
