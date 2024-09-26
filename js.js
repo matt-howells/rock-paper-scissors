@@ -1,4 +1,4 @@
-
+// Get random computer choice
 
 function getComputerChoice() {                  
     let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -12,21 +12,21 @@ function getComputerChoice() {
     }
 } 
 
-// Step 3: Write the logic to get the human choice
+// Get human choice via text input
 
 function getHumanChoice() {
     return prompt("Pick your poison: rock, paper, or scissors?")
 } 
 
 
-// Step 5: Write the logic to play one round. 
+// Logic for whole game 
 
-function playGame() { 
+function playGame() {  
     
     let humanScore = 0;
-    let computerScore = 0;
+    let computerScore = 0;   
 
-function playRound() {
+function playRound() { 
 
     let humanChoice = getHumanChoice().toLowerCase();
     let computerChoice = getComputerChoice();
@@ -53,8 +53,6 @@ for (let i = 0; i < 5; i++) {
 console.log(`Final Scores - You: ${humanScore}, Computer: ${computerScore}`);
 
 }
-
-
 
 playGame()
 
