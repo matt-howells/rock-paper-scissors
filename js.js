@@ -2,12 +2,21 @@ function getComputerChoice() {
     return Math.floor(Math.random() * 3 + 1);
 }
 
-let choice = getComputerChoice()
+let computerChoice = getComputerChoice()
 
-if (choice === 1 ) {
+if (computerChoice === 1 ) {
     console.log('rock')
-} else if (choice === 2 ) {
+} else if (computerChoice === 2 ) {
     console.log('paper') 
 } else {
     console.log('scissors')
 }
+
+function getHumanChoice() {
+    return prompt("Rock, paper, or scissors?")
+} 
+
+getHumanChoice()
+
+let humanScore = 0 
+let computerScore = 0 
