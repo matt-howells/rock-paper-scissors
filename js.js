@@ -1,4 +1,18 @@
-// Get random computer choice
+
+const rockBtn = document.createElement("button");
+const paperBtn = document.createElement("button");
+const scissorsBtn = document.createElement("button");
+
+rockBtn.textContent = "Rock";
+paperBtn.textContent = "Paper";
+scissorsBtn.textContent = "Scissors";
+
+document.body.appendChild(rockBtn);
+document.body.appendChild(paperBtn);
+document.body.appendChild(scissorsBtn);
+
+
+
 
 function getComputerChoice() {                  
     let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -15,7 +29,8 @@ function getComputerChoice() {
 // Get human choice via text input
 
 function getHumanChoice() {
-    return prompt("Pick your poison: rock, paper, or scissors?")
+    console.log("Pick your poison: rock, paper, or scissors?")
+    return prompt("Pick your poison: rock, paper, or scissors?");
 } 
 
 
@@ -23,8 +38,8 @@ function getHumanChoice() {
 
 function playGame() {  
     
-    let humanScore = 0;
-    let computerScore = 0;   
+   let humanScore = 0;
+   let computerScore = 0;   
 
 function playRound() { 
 
@@ -46,15 +61,21 @@ function playRound() {
     }
 }
 
-for (let i = 0; i < 5; i++) {
-    playRound();
+while (true) {
+   playRound();
 }
-
 console.log(`Final Scores - You: ${humanScore}, Computer: ${computerScore}`);
 
 }
 
 playGame()
+
+
+// ui 
+
+
+
+
 
     
 
